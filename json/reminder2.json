@@ -1,0 +1,17 @@
+{
+    "reminderList": [
+      {
+        "task": "Doctor Appointment",
+        "dueDate": "2024-10-30",
+        "priority": "Medium",
+        "notes": "Bring Insurance Card"
+      },
+      {
+        "task": "Submit Project Report",
+        "dueDate": "2025-11-02",
+        "priority": "High",
+        "notes": "Email to Professor"
+      }
+    ]
+  }
+  

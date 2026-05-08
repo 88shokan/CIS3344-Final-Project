@@ -1,0 +1,16 @@
+.blog {
+    background-color: #9f7e4b;
+    padding:2.5rem;
+    margin: 2rem 0;
+}
+.blog h3 {
+    color: rgb(255, 255, 255);
+    margin-top:0rem;
+}
+
+.blog p {
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+

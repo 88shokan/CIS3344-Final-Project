@@ -1,0 +1,25 @@
+{
+  "budgetTrack": [
+    {
+      "category": "Groceries",
+      "balance": 250,
+      "imgURL": "imgs/groceries.svg",
+      "description": "Monthly grocery shopping",
+      "caption": "Groceries budget for the month"
+    },
+    {
+      "category": "Rent",
+      "balance": 1200,
+      "imgURL": "imgs/rent.svg",
+      "description": "Monthly house rent",
+      "caption": "Rent payment for the month"
+    },
+    {
+      "category": "Savings",
+      "balance": 500,
+      "imgURL": "imgs/savings.svg",
+      "description": "Your savings",
+      "caption": "Savings for future goals"
+    }
+  ]
+}

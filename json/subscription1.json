@@ -1,0 +1,23 @@
+{
+  "subscriptions": [
+    {
+      "name": "Netflix",
+      "category": "Entertainment",
+      "cost": 15.99,
+      "billingCycle": "Monthly",
+      "nextPayment": "2025-11-15",
+      "paymentMethod": "Visa **** 4242",
+      "status": "Active"
+    },
+    {
+      "name": "Spotify Premium",
+      "category": "Music",
+      "cost": 9.99,
+      "billingCycle": "Monthly",
+      "nextPayment": "2025-11-10",
+      "paymentMethod": "PayPal",
+      "status": "Active"
+    }
+    
+  ]
+}

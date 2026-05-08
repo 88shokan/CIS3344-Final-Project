@@ -1,0 +1,77 @@
+/* Portfolio Card Base */
+.portfolio .portfolio-card {
+  border: 0.1rem solid #E3E2DF;
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 1rem;
+  width: 90%;               /* responsive: card takes 90% of container on small screens */
+  max-width: 20rem;         /* but never grows too wide */
+  background-color: #FAF9F6;
+  
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.portfolio .portfolio-card:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0.4rem 0.6rem 1.2rem rgba(0,0,0,0.15);
+}
+
+/* Title */
+.portfolio .portfolio-title {
+  margin: 0.5rem 0;
+  font-size: 1.4rem;
+  color: #1B3C6E;
+  text-align: center;
+}
+
+/* Image */
+.portfolio .portfolio-img {
+  display: block;
+  margin: 0 auto 0.5rem auto;
+  width: 40%;
+  height: auto;
+  max-height: 8rem;
+  object-fit: contain;
+}
+
+/* Controls (inputs + buttons) */
+.portfolio .portfolio-control {
+  margin-top: 0.5rem;
+}
+
+.portfolio .portfolio-control input,
+.portfolio .portfolio-control select,
+.portfolio .portfolio-control button {
+  margin: 0.3rem 0.2rem;
+  padding: 0.4rem 0.6rem;
+  font-size: 1rem;
+  max-width: 80%;
+}
+ 
+.portfolio .portfolio-control button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.portfolio .portfolio-control button:hover {
+  background-color: #005fa3;
+}
+
+/* Layout for multiple cards */
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  padding: 1rem;
+  
+}
+
+
+
+

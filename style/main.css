@@ -1,0 +1,121 @@
+/* mobile first design -- everything down to the media query is for mobile */
+body { 
+    margin:0;                   /* no white border around browser window */
+    font-family: sans-serif;    /* no tails on the font like Times New Roman */
+    background-color: #FAF9F6;
+}
+
+#titleNav {  
+
+    /* mobile: title on top of nav */
+    justify-content: center;
+    align-content: center;
+    display:flex; 
+    flex-direction: column;
+    align-items: center; 
+      /* center title + nav on mobile */
+    
+
+    /* fixed to top */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index:1;
+
+    padding: 1rem;
+    background-color: #1A3C6E;
+    color: white;
+
+}
+
+#title { /* mobile */
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.2rem; /* spaces out letters a bit */
+    white-space: nowrap;  /* don't allow the title to wrap */
+    
+     
+}
+
+#nav {
+   
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    white-space: nowrap;  /* don't allow nav links to wrap */
+    text-align: right;
+    padding: 1rem;
+}
+
+
+#nav a {  
+    text-decoration: none;/* Do not want links in "nav" to be underlined */ 
+    color: white;         /* make links white */  
+}
+
+#content { /* only put styles in here that you want for all content. 
+              dont put styles that are specific to your home content. */
+
+    padding: 1rem;
+
+    /* for mobile the titleNav is taller, needs more top padding */
+    margin-top: 7rem;  
+
+    /* dont allow footer to cover up bottom of content */
+    margin-bottom: 2.5rem;
+}
+
+
+#footer {
+
+    /* Fix the footer at the bottom, and make sure (z-index) it's on top of content */
+    position: fixed; 
+    bottom:0px;
+    z-index: 1;
+    font-weight: bold;
+    color: white;
+    background-color: #1A3C6E;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+}
+
+
+    
+
+
+/* desktop only */
+@media only screen and (min-width: 38rem) { /* this size is tailored to size of "web site title" */
+
+    /* in desktop the titleNav is not as tall, so less top margin needed to prevent titleNav from hiding top of for content */
+    #content {
+        margin-top: 4.5rem;
+        
+    }
+
+    #titleNav {
+        /* flex attributes */
+        font-size: 1.25rem;  /* grow nav text a bit on desktop */
+        flex-direction: row;
+        justify-content: space-between; /* flex attribute will push title left and nav right, with "space between" */
+    }
+
+    #title {
+        font-size: 1.5rem;   /* grow title back on desktop */
+    }
+
+    .home p {
+        
+        text-align: center;
+        position: absolute;
+        left: 22%;            
+        border-width: 0px;
+        font-size: 1.75rem;  
+        max-width: 50%;
+        border-width: 0px;    
+    }
+
+}
+

@@ -1,0 +1,23 @@
+{
+  "subscriptions": [
+    {
+      "name": "Hulu",
+      "category": "Entertainment",
+      "cost": 12.99,
+      "billingCycle": "Monthly",
+      "nextPayment": "2025-11-20",
+      "paymentMethod": "Mastercard **** 9810",
+      "status": "Active"
+    },
+    {
+      "name": "Adobe Creative Cloud",
+      "category": "Software",
+      "cost": 54.99,
+      "billingCycle": "Monthly",
+      "nextPayment": "2025-11-22",
+      "paymentMethod": "Visa **** 4242",
+      "status": "Active"
+    }
+    
+  ]
+}

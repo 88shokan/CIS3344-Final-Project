@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<!-- HTML comments like this... -->
+<html>
+
+<head>
+    <title>Phinance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This references the little icon that shows in your browser tab -->
+    <link rel="shortcut icon" href="icons/phinancelogo.png" />
+
+    <!-- Style Sheet References -->
+    <!-- Modify  main.css according to the styling you want for your web site -->
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+
+    <!-- Keep dropDown.css as it was "provided" to you  (so that your drop down menus work ok) 
+        but use myDropDown.css to override style choices to get the colors and spacing 
+        that you want for your nav bar -->
+    <link href="style/dropDown.css" rel="stylesheet" type="text/css" />
+    <link href="style/myDropDown.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Component specific style sheets (e.g., the blog or home component). Following
+        our CSS File Naming Convention, make sure that every CSS style rule starts with 
+        ".fileName" so that each style sheet styles only one component and does not "mess up"
+         the styling of other components. -->
+    <link href="style/usersComingSoon.css" rel="stylesheet" type="text/css" />
+    <link href="style/home.css" rel="stylesheet" type="text/css" />
+    <link href="style/blog.css" rel="stylesheet" type="text/css" />
+    <link href="style/makeBudgetTracker.css" rel="stylesheet" type="text/css" />
+    <link href="style/portfolio.css" rel="stylesheet" type="text/css" />
+    <link href="style/slideShow.css" rel="stylesheet" type="text/css" />
+    <link href="style/reminderList.css" rel="stylesheet" type="text/css" />
+    <link href="style/subscriptionList.css" rel="stylesheet" type="text/css" />
+    <link href="style/editArea.css" rel="stylesheet" type="text/css" />
+
+
+    <!-- You need these two CDNs to use react, their version numbers must match -->
+    <!-- changed version on 10-20-2022 from 16.3.1 to 18 for react and react-dom -->
+    <script src='https://unpkg.com/react@18/umd/react.production.min.js'></script>
+    <script src='https://unpkg.com/react-dom@18/umd/react-dom.production.min.js'></script>
+
+    <!-- This CDN lets you use JSX (looks like HTML tags in JS) -->
+    <script src='https://unpkg.com/babel-standalone@6.26.0/babel.js'></script>
+
+    <!-- This CDN lets you use React Routing -->
+    <script src='https://unpkg.com/react-router-dom@5.0.0/umd/react-router-dom.min.js'></script>
+
+    <style>
+    </style>
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <!-- Put JS reusable first (these are called by CGFs or by the page like the dropDown FW). -->
+     <script src="_JS_reusable/ajax_alt.js"></script>
+    <script src="_JS_reusable/jsSort.js"></script>
+    <script src="_JS_reusable/sortOrder.js"></script>
+    <script src="_JS_reusable/dropDownFW.js"></script>
+    <script src="_JS_reusable/MakeBudgetTracker.js"></script>
+    <script src="_JS_reusable/MakeSlideShow.js"></script>
+    <script src="_JS_reusable/ajax.js"></script>
+    <script src="_JS_reusable/persist.js"></script>
+    <script src="_JS_reusable/MakeReminderObjList.js"></script>
+    <script src ="_JS_reusable/MakeEditArea.js"></script>
+    <script src="_JS_reusable/Validate.js"></script>
+    <script src="_JS_reusable/MakeObj.js"></script>
+    <script src="_JS_reusable/MakeTag.js"></script>
+    <script src="_JS_reusable/MakeRadio.js"></script>   
+   
+    
+
+    <!-- JS Content Generating functions (these are called by the router). -->
+    <script src="_JS_CGF/UsersComingSoonJS.js"></script>
+    <script src="_JS_CGF/MakeBudgetTracker_CGF.js"></script>
+    <script src="_JS_CGF/SlideShowAjax_CGF.js"></script>
+    <script src="_JS_CGF/MakeReminderObjList_CGF.js"></script>
+    <script src="_JS_CGF/MakeEditArea_CGF.js"></script>
+    <script src="_JS_CGF/TwoEditAreas_CGF.js"></script>
+    <script src="_JS_CGF/MakeLoanApplicationEdit_CGF.js"></script>
+    <script src="_JS_CGF/MakeInvestmentEdit_CGF.js"></script>
+
+    <!-- React reusable (these are called by CGFs). -->
+    <script type="text/babel" src="_React_reusable/ConvertEle.js"></script>
+    <script type="text/babel" src="_React_reusable/MakePortfolioR.js"></script>
+    <script type="text/babel" src="_React_reusable/MakeSubscriptionListR.js"></script>
+
+    <!-- React Content Generating functions (these are called by the router) -->
+    <script type="text/babel" src="_React_CGF/BlogR.js"></script>
+<script type="text/babel" src="_React_CGF/HomeR.js"></script>
+<script type="text/babel" src="_React_CGF/UsersComingSoonR.js"></script>
+<script type="text/babel" src="_React_CGF/MakePortfolioR_CGF.js"></script>
+<script type="text/babel" src="_React_CGF/SubscriptionListOneR.js"></script>
+<script type="text/babel" src="_React_CGF/SubscriptionListTwoR.js"></script>
+<script type="text/babel" src="_React_CGF/MakeSubscriptionListR_CGF.js"></script>
+
+    <!-- Any React scripts (which use JSX) need script type="text/babel" -->
+
+
+    <script type="text/babel">
+
+        "use strict";
+
+        dropDownFW({
+            dropHeaderStyle: "dropHeader",
+            dropContentStyle: "dropContent",
+            showStyle: "show",
+            hideStyle: "hide"
+        });
+
+        const Link = ReactRouterDOM.Link;
+        const Route = ReactRouterDOM.Route;
+
+        const App = () => (
+            <ReactRouterDOM.HashRouter>
+
+                <div id="titleNav">
+                    <div id="title">
+                        Phinance By Billy Phan
+                    </div>
+                    <div id="nav">
+                        <div class="dropDown">
+                            <Link to="/home">Home</Link>
+                        </div>
+
+                        <div class="dropDown">
+                            <div class="dropHeader">Search-JS</div>
+                            <div class="dropContent">
+                                <Link to="/myUsersJS">Users (JS)</Link> <br />
+                                <Link to="/myObj">JS XXX Objects</Link> <br />
+                                <Link to="/slideShow">JS SlideShow</Link> <br />
+                                <Link to="/myObjList">JS XXX Object List</Link> <br />
+                                <Link to="/TwoEditAreas">Two Edit Areas</Link> <br />
+                            </div>
+                        </div>
+
+                        <div class="dropDown">
+                            <div class="dropHeader">Search-React</div>
+                            <div class="dropContent">
+                                <Link to="/myUsersR">Users (React)</Link> <br />
+                                <Link to="/myPortfolioR">React XXX Objects</Link> <br />
+                                <Link to="/subscriptionListR">React XXX Object List</Link> <br />
+
+                            </div>
+                        </div>
+
+                        <div class="dropDown">
+                            <Link to="/blog">Blog</Link>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="content">
+                    <Route path="/" exact component={HomeR} />
+                    <Route path="/home" component={HomeR} />
+                    <Route path="/myPortfolioR" component={MakePortfolioR_CGF} />
+                    <Route path="/subscriptionListR" component={MakeSubscriptionListR_CGF} />
+                    <Route path="/myUsersJS" component={() => <ConvertEle ele={UsersComingSoonJS()} />} />
+                    <Route path="/myObj" component={() => <ConvertEle ele={MakeBudgetTracker_CGF()} />} />
+                    <Route path="/myUsersR" component={UsersComingSoonR} />
+                    <Route path="/blog" component={BlogR} />
+                    <Route path="/slideShow" component={() => <ConvertEle ele={SlideShowAjax_CGF()} />} />
+                    <Route path="/myObjList" component={() => <ConvertEle ele={MakeReminderObjList_CGF()} />} />
+                    <Route path="/TwoEditAreas" component={() => <ConvertEle ele={TwoEditAreas_CGF()} />} />
+                    
+                    
+                    
+                        
+                    
+                    
+                    
+                </div>
+
+                <div id="footer">
+                    Billy Phan
+                </div>
+
+            </ReactRouterDOM.HashRouter>
+        );
+
+        ReactDOM.render(<App />, document.getElementById('root'));
+        
+
+    </script>
+
+</body>
+
+</html>

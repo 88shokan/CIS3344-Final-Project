@@ -1,0 +1,155 @@
+
+  
+
+
+.makeBudgetTracker {
+    background-color: #d2e4f1;
+    border: 1px solid #ffffff;
+    border-radius: 16px;
+    padding: 1.25rem;
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    line-height: 2rem;
+    margin: 8rem auto;
+}
+
+.makeBudgetTracker:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Card image */
+.makeBudgetTracker .budget-img {
+    width: 100%;
+    max-height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 0.5rem;
+}
+
+/* Category title */
+.makeBudgetTracker .budget-category {
+    margin: 0.25rem 0 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2d3748;
+    text-align: center;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Balance amount */
+.makeBudgetTracker .budget-amount {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #16a34a;
+    margin-bottom: 1rem;
+    text-align: center;
+    padding: 0.75rem 0;
+    background-color: #f0fdf4;
+    border-radius: 8px;
+    border: 1px solid #bbf7d0;
+}
+
+/* Input */
+.makeBudgetTracker .budget-input {
+    width: 95%;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+/* Buttons */
+.makeBudgetTracker .budget-btn {
+    padding: 0.6rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    background-color: #009b34;
+    color: white;
+    margin-top: 0.5rem;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.makeBudgetTracker .budget-btn:hover {
+    background-color: #007c2a;
+    transform: scale(1.03);
+}
+
+/* ========== TRANSACTION SECTION ========== */
+.makeBudgetTracker .transaction-instructions {
+    font-size: 0.9rem;
+    color: #333;
+    background-color: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    padding: 0.5rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.makeBudgetTracker .transaction-instructions .plus {
+    color: #16a34a;
+    font-weight: bold;
+}
+
+.makeBudgetTracker .transaction-instructions .minus {
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Transaction list */
+.makeBudgetTracker .transaction-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 1rem;
+    border-top: 1px solid #ccc;
+}
+
+/* Each transaction item */
+.makeBudgetTracker .transaction {
+    padding: 0.4rem 0.5rem;
+    margin: 0.25rem 0;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Income transaction */
+.makeBudgetTracker .transaction.income {
+    background-color: #ecfdf5;
+    color: #16a34a;
+    border: 1px solid #a7f3d0;
+}
+
+/* Expense transaction */
+.makeBudgetTracker .transaction.expense {
+    background-color: #fef2f2;
+    color: #dc2626;
+    border: 1px solid #fecaca;
+}
+
+
+@media (max-width: 600px) {
+    .makeBudgetTracker .budget-page {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 4rem auto;
+    }
+
+    .makeBudgetTracker {
+        max-width: 90%;
+    }
+}

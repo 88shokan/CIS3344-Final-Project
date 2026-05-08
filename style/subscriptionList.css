@@ -1,0 +1,125 @@
+/* Main container for each subscription list */
+.subscriptionList {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+    border-radius: 16px;
+    padding: 30px;
+    margin: 20px auto;
+    max-width: 900px;
+    box-shadow: 0 10px 30px rgba(30, 58, 138, 0.3);
+}
+
+.subscriptionList h2 {
+    color: white;
+    font-size: 28px;
+    margin: 0 0 25px 0;
+    font-weight: 600;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual subscription card */
+.subscriptionList .subscription {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subscriptionList .subscription:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.subscriptionList .subscription:last-child {
+    margin-bottom: 0;
+}
+
+/* Service name styling */
+.subscriptionList .subscription {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* Status badges */
+.subscriptionList .subscription span.active {
+    display: inline-block;
+    background: #10b981;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.subscriptionList .subscription span.canceled,
+.subscriptionList .subscription span.inactive {
+    display: inline-block;
+    background: #ef4444;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Input fields */
+.subscriptionList .subscription input {
+    padding: 8px 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: border-color 0.3s ease;
+    width: 200px;
+}
+
+.subscriptionList .subscription input:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+/* Buttons */
+.subscriptionList .subscription button {
+    background: linear-gradient(135deg, #667eea 0%, #0008ff 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 5px;
+}
+
+.subscriptionList .subscription button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.subscriptionList .subscription button:active {
+    transform: scale(0.98);
+}
+
+/* Horizontal rules */
+.subscriptionList .subscription hr {
+    border: none;
+    border-top: 2px solid #f3f4f6;
+    margin: 15px 0;
+}
+
+/* Loading state */
+.subscriptionList p {
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 40px;
+}
+

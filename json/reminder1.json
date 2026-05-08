@@ -1,0 +1,13 @@
+{
+    "reminderList": [
+      {
+        "task": "Pay Electricity Bill",
+        "dueDate": "2024-10-28",
+        "priority": "High",
+        "notes": "Use Online Payment"
+      },
+
+      {}
+    ]
+  }
+  

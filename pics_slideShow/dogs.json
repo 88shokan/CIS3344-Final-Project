@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Buddy",
+      "breed": "Chihuahua",
+      "origin": "Mexico",
+      "image": "/pics_slideShow/dog1.jpg"
+    },
+
+    {
+      "name": "Max",
+      "breed": "Pug",
+      "origin": "China",
+      "image": "/pics_slideShow/dog2.jpg"
+    },
+
+    {
+      "name": "Rocky",
+      "breed": "Shiba Inu",
+      "origin": "Japan",
+      "image": "/pics_slideShow/dog3.jpg"
+    }
+  ]

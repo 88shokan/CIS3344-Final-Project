@@ -1,0 +1,22 @@
+[
+    {
+        "sport": "basketball",
+        "image": "/pics_slideShow/basketball.jpg",
+        "founded": "1891",
+        "players": "5"
+    },
+    {
+       "sport": "football",
+        "image": "/pics_slideShow/football.jpg",
+        "founded": "1869",
+        "players": "11"
+
+    },
+    {
+        "sport": "soccer",
+        "image": "/pics_slideShow/soccer.jpg",
+        "founded": "1863",
+        "players": "11"
+    }
+    
+]
